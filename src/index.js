@@ -8,7 +8,6 @@
 
 
 module.exports = function (seneca) {
-
   require('./lib/stub').call(seneca);
 
 };

@@ -1,7 +1,7 @@
 # seneca-stub
 A utility for stubbing seneca.js patterns
 
-*This is a WIP*
+*This is based on Denis Luchkin-Zhou's stub utility from [seneca-as-promised](https://github.com/jluchiji/seneca-as-promised)*
 
 # Getting Started
 

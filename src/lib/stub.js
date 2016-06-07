@@ -7,17 +7,15 @@
  */
 
 const _            = require('lodash');
+const sinon        = require('sinon');
 
 
 function stub() {
   const Seneca = this;
 
-  if (!global.Sinon) { return; }
-
-
   Seneca.stub = function(pattern, value) {
 
-    const _stub = global.Sinon.spy(function(args, done) {
+    const _stub = sinon.spy(function(args, done) {
       if (value instanceof Error) {
         done(value, null);
       } else {
@@ -28,7 +26,8 @@ function stub() {
 
     _stub.data = function() {
       if (!this.calledOnce) {
-        throw new Error('Expected Seneca stub to be called once');
+        console.warn('Expected Seneca stub to be called once')
+        return {}
       }
       return _.omit(this.firstCall.args[0], 'meta$', 'tx$');
     };
