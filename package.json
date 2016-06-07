@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/otaviosoares/seneca-stub#readme",
   "dependencies": {
-    "lodash": "^4.13.1"
+    "lodash": "^4.13.1",
+    "sinon": "^1.17.4"
   }
 }
