@@ -1,0 +1,28 @@
+{
+  "name": "seneca-stub",
+  "version": "0.1.0",
+  "description": "A utility for stubbing seneca.js patterns",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/otaviosoares/seneca-stub.git"
+  },
+  "keywords": [
+    "seneca",
+    "test",
+    "stub",
+    "sinon"
+  ],
+  "author": "Otavio Augusto Soares <otaviokk@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/otaviosoares/seneca-stub/issues"
+  },
+  "homepage": "https://github.com/otaviosoares/seneca-stub#readme",
+  "dependencies": {
+    "lodash": "^4.13.1"
+  }
+}
