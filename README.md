@@ -1,7 +1,13 @@
 # seneca-stub
-A utility for stubbing seneca.js patterns
+A utility for stubbing seneca.js patterns using [Sinon.JS](https://github.com/sinonjs/sinon)
 
 *This is based on Denis Luchkin-Zhou's stub utility from [seneca-as-promised](https://github.com/jluchiji/seneca-as-promised)*
+
+# Install
+
+```bash
+npm install seneca-sub
+```
 
 # Getting Started
 

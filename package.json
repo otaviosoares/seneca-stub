@@ -1,8 +1,8 @@
 {
   "name": "seneca-stub",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A utility for stubbing seneca.js patterns",
-  "main": "lib/index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "npm test"
   },
@@ -11,7 +11,7 @@
     "url": "git+ssh://git@github.com/otaviosoares/seneca-stub.git"
   },
   "files": [
-    "lib"
+    "src"
   ],
   "keywords": [
     "seneca",
