@@ -6,7 +6,7 @@ A utility for stubbing seneca.js patterns using [Sinon.JS](https://github.com/si
 # Install
 
 ```bash
-npm install seneca-sub
+npm install seneca-stub
 ```
 
 # Getting Started
