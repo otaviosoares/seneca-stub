@@ -18,10 +18,12 @@ function stub() {
     const _stub = sinon.spy(function(args, done) {
       if (value instanceof Error) {
         done(value, null);
+      } else if (typeof value === 'function') {
+        value(args, done);
       } else {
         done(null, value);
       }
-    });
+    })
     Seneca.add(pattern, _stub);
 
     _stub.data = function() {

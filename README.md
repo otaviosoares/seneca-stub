@@ -16,11 +16,25 @@ const Seneca = require('seneca')();
 require('seneca-stub')(Seneca);
 ```
 
+### Return static data
+
 ```js
 const stub = Seneca.stub('role:test,cmd:stub', { foo: 'bar' });
 await Seneca.act('role:test,cmd:stub', { herp: 'derp' }); // { foo: 'bar' }
 
 stub.data(); // { role: 'test', cmd: 'stub', herp: 'derp' }
+```
+
+### Use custom function
+
+```js
+const stub = Seneca.stub('role:test,cmd:stub', function(args, done) {
+	var result = {greet: 'hello '+ args.name }
+	done(null, result)
+});
+await Seneca.act('role:test,cmd:stub', { name: 'john' }); // { response: 'hello john' }
+
+stub.data(); // { role: 'test', cmd: 'stub', name: 'john' }
 ```
 
 If value provided to `Seneca.stub` is an `Error`, then it will be thrown instead
