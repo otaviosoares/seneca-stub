@@ -29,10 +29,10 @@ stub.data(); // { role: 'test', cmd: 'stub', herp: 'derp' }
 
 ```js
 const stub = Seneca.stub('role:test,cmd:stub', function(args, done) {
-	var result = {greet: 'hello '+ args.name }
+	var result = {greeting: 'hello '+ args.name }
 	done(null, result)
 });
-await Seneca.act('role:test,cmd:stub', { name: 'john' }); // { response: 'hello john' }
+await Seneca.act('role:test,cmd:stub', { name: 'john' }); // { greeting: 'hello john' }
 
 stub.data(); // { role: 'test', cmd: 'stub', name: 'john' }
 ```
