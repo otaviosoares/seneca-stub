@@ -26,12 +26,12 @@ function stub() {
     })
     Seneca.add(pattern, _stub);
 
-    _stub.data = function() {
-      if (!this.calledOnce) {
+    _stub.data = function(i) {
+      if (!this.called) {
         console.warn('Expected Seneca stub to be called once')
         return {}
       }
-      return _.omit(this.firstCall.args[0], 'meta$', 'tx$');
+      return _.omit(this.getCall(i || 0).args[0], 'meta$', 'tx$');
     };
 
     return _stub;
